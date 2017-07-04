@@ -10,10 +10,9 @@ sudo tar zxvf java.tar.gz
 sudo update-alternatives --install /usr/bin/java java /opt/jdk1.8.0_45/bin/java 100
 sudo update-alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_45/bin/javac 100
 sudo update-alternatives --config java
-
-sudo apt-get -y autoremove
 echo "Java Installed"
 
+sudo apt-get -y autoremove
 
 # Create dedicated bamboo user
  #sudo /usr/sbin/useradd --create-home --home-dir /usr/local/bamboo --shell /bin/bash bamboo
@@ -25,6 +24,7 @@ echo "Java Installed"
 # Create home directory
 # mkdir /home/vagrant/bamboo/bamboo-home
 java -version
+git -version
 echo "All complete"
 # tar zxvf 
 
