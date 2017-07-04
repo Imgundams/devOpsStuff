@@ -3,13 +3,17 @@
 sudo apt-get update
 
 sudo apt-get install -y apache2
-#sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
 sudo apt-get install -y git
-#sudo apt-get install -y oracle-java8-installer
-#sudo apt-get install -y oracle-java8-set-default
+sudo mv /vagrant_data/java.tar.gz /opt/java.tar.gz 
+cd /opt
+sudo tar zxvf java.tar.gz
+sudo update-alternatives --install /usr/bin/java java /opt/jdk1.8.0_45/bin/java 100
+sudo update-alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_45/bin/javac 100
+sudo update-alternatives --config java
+
 sudo apt-get -y autoremove
 echo "Java Installed"
+
 
 # Create dedicated bamboo user
  #sudo /usr/sbin/useradd --create-home --home-dir /usr/local/bamboo --shell /bin/bash bamboo

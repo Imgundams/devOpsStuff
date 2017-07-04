@@ -1,5 +1,6 @@
 Vagrant.configure(2) do |config|
 
+puts "JUST DO IT!"
   # https://docs.vagrantup.com.
   
   config.vm.hostname = "DANBOX.qac.local"
@@ -12,6 +13,7 @@ Vagrant.configure(2) do |config|
   # `vagrant box outdated`. This is not recommended.
    config.vm.box_check_update = false
 
+   
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -47,5 +49,6 @@ Vagrant.configure(2) do |config|
      vb.memory = "8101"
   end
 
+  puts "YESTERDAY YOU SAID TOMMOROW SO JUST DO IT!"
    config.vm.provision "shell", path:"bootstrap.sh"
 end
